@@ -224,18 +224,18 @@ hr {
 # ─────────────────────────────────────────────
 # MCP SERVER CONFIG
 # ─────────────────────────────────────────────
+import sys
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+
+SERVER_PATH = os.path.join(BASE_DIR, "server.py")
+
 SERVERS = {
     "expense": {
         "transport": "stdio",
-        "command": "uv",
-        "args": [
-            "run",
-            "--with",
-            "fastmcp",
-            "fastmcp",
-            "run",
-            "/Users/rajneelchavan1601/Desktop/expense tracker mcp server/main.py"
-        ],
+        "command": sys.executable,
+        "args": [SERVER_PATH],
         "env": {}
     }
 }
