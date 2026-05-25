@@ -226,7 +226,7 @@ hr {
 # ─────────────────────────────────────────────
 SERVERS = {
     "expense": {
-        "transport": "streamable_http",
+        "transport": "sse",
         "url": "https://pale-coffee-cougar.fastmcp.app/mcp"
     }
 }
