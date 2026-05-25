@@ -226,7 +226,7 @@ hr {
 # ─────────────────────────────────────────────
 SERVERS = {
     "expense": {
-        "transport": "sse",
+        "transport": "streamable_http",
         "url": "https://pale-coffee-cougar.fastmcp.app/mcp"
     }
 }
@@ -308,7 +308,8 @@ if "initialized" not in st.session_state:
             st.session_state.tool_count = len(tools)
         except Exception as e:
             st.session_state.connected = False
-            st.session_state.error = str(e)
+            import traceback
+            st.session_state.error = traceback.format_exc()
             st.session_state.initialized = True
 
 # ─────────────────────────────────────────────
