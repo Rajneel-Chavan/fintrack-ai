@@ -292,8 +292,7 @@ QUICK_ACTIONS = [
 # ─────────────────────────────────────────────
 load_dotenv()
 
-if hasattr(st, "secrets") and "OPENAI_API_KEY" in st.secrets:
-    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # ─────────────────────────────────────────────
 # INITIALIZE SESSION STATE
